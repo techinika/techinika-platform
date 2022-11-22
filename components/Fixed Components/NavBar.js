@@ -1,12 +1,15 @@
 import React from 'react';
 import { Login } from '../Modals/Login';
+import { Register } from '../Modals/Register';
 
 export const NavBar = ({t}) => {
     const [showModal, setShowModal] = React.useState(false);
+    const [showRegModal, setShowRegModal] = React.useState(false);
 
     return (
         <>
            {showModal ? <Login setShowModal={setShowModal} t={t}/> : null}
+           {showRegModal ? <Register setShowRegModal={setShowRegModal} t={t}/> : null}
 
 
             <div className='bg-white'>
@@ -19,7 +22,7 @@ export const NavBar = ({t}) => {
                     </div>
                     <div className='flex gap-3'>
                         <button className='btn-blue transition-all duration-150' type="button" onClick={() => setShowModal(true)}>{t('Log In')}</button>
-                        <button className='btn-normal'>{t('Sign Up')}</button>
+                        <button className='btn-normal transition-all duration-150' type="button" onClick={() => setShowRegModal(true)}>{t('Sign Up')}</button>
                     </div>
                 </div>
             </div>
