@@ -26,7 +26,7 @@ export const ShortProfile = ({t}) => {
                 </div>
                 <hr></hr>
                 <div className="font-bold flex justify-center items-center p-4 text-blue-900">
-                    <h1>Manage Profile</h1>
+                    <h1>{t('Manage Profile')}</h1>
                 </div>
             </div>
     )
