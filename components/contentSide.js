@@ -2,7 +2,7 @@ import Image from "next/image"
 import Dmc from "../public/dmc.jpg"
 import { NewQuestion } from "./newQuestion"
 
-export const ContentSide = () => {
+export const ContentSide = ({t}) => {
     return (
         <>
             <div className="w-2/4 rounded-md bg-white">

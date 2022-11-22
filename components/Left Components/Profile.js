@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Vector from "../../public/vector.png"
 
-export const ShortProfile = () => {
+export const ShortProfile = ({t}) => {
     return (
         <div className="bg-white w-full rounded-md text-center">
                 <div className="flex flex-col items-center py-5 px-2">
@@ -12,15 +12,15 @@ export const ShortProfile = () => {
                 <hr></hr>
                 <div className="py-5 px-5">
                     <div className="font-bold flex flex-row items-center">
-                        <p>Total Articles</p>
+                        <p>{t('Total Articles')}</p>
                         <p className="text-blue-900 ml-auto">23</p>
                     </div>
                     <div className="font-bold flex flex-row items-center">
-                        <p>Total Questions</p>
+                        <p>{t('Total Questions')}</p>
                         <p className="text-blue-900 ml-auto">23</p>
                     </div>
                     <div className="font-bold flex flex-row items-center">
-                        <p>Total Answers</p>
+                        <p>{t('Total Answers')}</p>
                         <p className="text-blue-900 ml-auto">23</p>
                     </div>
                 </div>

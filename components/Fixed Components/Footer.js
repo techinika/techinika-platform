@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 
-export const Footer = () => {
+export const Footer = ({t}) => {
     return (
         <>
             <hr></hr>
@@ -10,54 +10,54 @@ export const Footer = () => {
                     <h1 className="logo py-2">Techinika</h1>
                     <div className="w-full flex flex-row items-start gap-3">
                         <div className="flex-1 border-r-2">
-                            <p>Techinika is an organisation working towards 100% digital inclusion in Rwanda and Africa by 2030.</p>
+                            <p>{t('Techinika is an organisation working towards 100% digital inclusion in Rwanda and Africa by 2030.')}</p>
                         </div>
                         <div className="flex-1 border-r-2">
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>About Techinika</p>    
+                                    <p>{t('About Techinika')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Our Community</p>    
+                                    <p>{t('Our Community')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Our Programs</p>    
+                                    <p>{t('Our Programs')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Our Events</p>    
+                                    <p>{t('Our Events')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Terms of use</p>    
+                                    <p>{t('Terms of use')}</p>    
                                 </Link>
                             </a>
                         </div>
                         <div className="flex-1">
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Learning with Techinika</p>    
+                                    <p>{t('Learning with Techinika')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Private Trainings</p>    
+                                    <p>{t('Private Trainings')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Group Trainings</p>    
+                                    <p>{t('Group Trainings')}</p>    
                                 </Link>
                             </a>
                             <a>
                                 <Link href="https://about.techinika.com">
-                                    <p>Our Partners</p>    
+                                    <p>{t('Our Partners')}</p>    
                                 </Link>
                             </a>
                         </div>

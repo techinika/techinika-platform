@@ -1,6 +1,6 @@
 
 
-export const RecentQuestions = () => {
+export const RecentQuestions = ({t}) => {
     return (
         <div className="bg-white w-full rounded-md">
             <h1 className="font-bold text-blue-900 p-3 text-center text-lg">Recent Questions</h1>

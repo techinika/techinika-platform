@@ -22,6 +22,10 @@
   @apply bg-teal-50 text-blue-900 py-1 px-5 rounded-full;
 }
 
+.btn-lang {
+  @apply bg-blue-900 text-white p-3 rounded-sm;
+}
+
 .input {
-  @apply px-4 py-2 border-gray-100 bg-gray-100 outline-none rounded-full text-sm;
+  @apply px-4 py-2 border-gray-100 bg-gray-100 outline-none rounded-full text-sm focus:border-2 focus:border-blue-900 border-inherit border-2;
 }
