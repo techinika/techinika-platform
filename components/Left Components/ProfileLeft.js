@@ -4,9 +4,11 @@ import Vector from "../../public/vector.png"
 import { Offer } from "./Offer"
 import BadgeImg from "../../public/badge.jpg";
 import { EditPasswordInside } from "../Modals/EditPasswordInside";
+import { EditProfile } from "../Modals/EditProfile";
 
 export const ProfileLeft = ({t}) => {
     const [showEditPasswordInside, setShowEditPasswordInside] = React.useState(false)
+    const [showEditProfile, setShowEditProfile] = React.useState(false)
     const badges = [
         {
             title: "Novice: Answered 5 questions",
@@ -24,9 +26,11 @@ export const ProfileLeft = ({t}) => {
 
         {showEditPasswordInside ? <EditPasswordInside setShowEditPasswordInside={setShowEditPasswordInside} t={t}/> : null}
 
+        {showEditProfile ? <EditProfile t={t} setShowEditProfile={setShowEditProfile}/> : null}
+
         <div className="rounded-md flex flex-col  w-1/4 gap-2">
             <div className="bg-white w-full rounded-md text-center relative">
-                <p className="text-xs text-blue-900 absolute top-3 right-3 cursor-pointer" >Edit</p>
+                <p className="text-xs text-blue-900 absolute top-3 right-3 cursor-pointer"  onClick={e=> setShowEditProfile(true)}>Edit</p>
                 <div className="flex flex-col items-center py-5 px-2">
                     <Image className="rounded-full" src={Vector} width="100" height={100}/>
                     <h1 className="font-bold text-xl p-1">Cishahayo Songa Achille</h1>
@@ -35,7 +39,7 @@ export const ProfileLeft = ({t}) => {
                     <p className="badge">{t('Normal Mode')}</p>
                 </div>
                 <hr></hr>
-                <div className="p5">
+                <div className="p-5">
                     <div className="font-bold flex flex-row items-center">
                         <p>{t('Total Articles')}</p>
                         <p className="text-blue-900 ml-auto">23</p>

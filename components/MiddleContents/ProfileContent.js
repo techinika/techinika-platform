@@ -1,4 +1,5 @@
 import React from "react";
+import { Offer } from "../Left Components/Offer";
 import { NewQuestion } from "../newQuestion"
 
 export const ProfileContent = ({t}) => {
@@ -53,23 +54,63 @@ export const ProfileContent = ({t}) => {
                             <div className="px-4 py-5 flex-auto">
                                 <div className="tab-content tab-space">
                                     <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                                    <p>
-                                        Tab 1
-                                    </p>
+                                        <div className="flex justify-center items-center">
+                                            <Offer t={t}/>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="tab-content tab-space">
                                     <div className={openTab === 2 ? "block" : "hidden"} id="link1">
-                                    <p>
-                                        Tab 2
-                                    </p>
+                                        <div className="flex flex-col">
+                                            <div>
+                                                <h1 className="content-title">This is the title of the question</h1>
+                                                <p className="text-xs mt-0 mb-2 text-blue-900">Asked on 20th November 2022</p>
+                                                <div className="flex flex-row justify-between items-center text-xs mb-1">
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Answers</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">12 Upvotes</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Shares</p>
+                                                </div>
+                                                <hr></hr>
+                                            </div>
+                                            <div>
+                                                <h1 className="content-title">This is the title of the question</h1>
+                                                <p className="text-xs mt-0 mb-2 text-blue-900">Asked on 20th November 2022</p>
+                                                <div className="flex flex-row justify-between items-center text-xs mb-1">
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Answers</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">12 Upvotes</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Shares</p>
+                                                </div>
+                                                <hr></hr>
+                                            </div>
+                                            <div>
+                                                <h1 className="content-title">This is the title of the question</h1>
+                                                <p className="text-xs mt-0 mb-2 text-blue-900">Asked on 20th November 2022</p>
+                                                <div className="flex flex-row justify-between items-center text-xs mb-1">
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Answers</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">12 Upvotes</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Shares</p>
+                                                </div>
+                                                <hr></hr>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="tab-content tab-space">
                                     <div className={openTab === 3 ? "block" : "hidden"} id="link1">
-                                    <p>
-                                        Tab 3
-                                    </p>
+                                    <div className="flex flex-col">
+                                            <div>
+                                                <h1 className="content-title">Answered on "How to make money online?"</h1>
+                                                <p className="text-xs mt-0 mb-2 text-blue-900">Posted on 20th November 2022</p>
+                                                <div className="flex flex-row justify-between items-center text-xs mb-1">
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">12 Upvotes</p>
+                                                    <p className="px-2 py-1 bg-gray-100 rounded-full border-2">23 Shares</p>
+                                                </div>
+                                                <hr></hr>
+                                            </div>
+                                            
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
