@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Dmc from "../public/dmc.jpg"
-import { NewQuestion } from "./newQuestion"
+import Dmc from "../../public/dmc.jpg"
+import { NewQuestion } from "../newQuestion"
 
 export const ContentSide = ({t}) => {
     return (

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .logo {
-  @apply font-bold text-xl;
+  @apply font-bold text-xl cursor-pointer;
 }
 
 .btn-blue {

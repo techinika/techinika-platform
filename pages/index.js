@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router';
-import { ContentSide } from '../components/contentSide'
-import { Footer } from '../components/Fixed Components/Footer'
-import { NavBar } from '../components/Fixed Components/NavBar'
+import { ContentSide } from '../components/MiddleContents/contentSide'
 import { LeftSide } from '../components/leftSide'
 import { RightSide } from '../components/rightSide'
-
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
@@ -14,13 +11,12 @@ export async function getStaticProps({ locale }) {
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
-      // Will be passed to the page component as props
     },
   };
 }
 
 export default function Home() {
-  const { locale, locales, push } = useRouter();
+  const { locales } = useRouter();
   const { t } = useTranslation('common');
 
   return (
@@ -31,22 +27,19 @@ export default function Home() {
       </Head>
 
       <div className='fixed left-0 h-screen flex items-center justify-center flex-col gap-4 p-1'>
-        {locales.map(l => (
+          {locales.map(l => (
           <Link href="/" locale={l} key={l} >
-            <p className="p-2 text-white rounded-full bg-blue-900 cursor-pointer">{l}</p>
+              <p className="p-2 text-white rounded-full bg-blue-900 cursor-pointer">{l}</p>
           </Link>
-        ))}
+          ))}
       </div>
 
-      <div className='w-full bg-gray-50'>
-        <NavBar t={t}/>
-        <div className='w-8/12 mt-4 mb-4 flex flex-row mx-auto gap-4 items-start'>
-          <LeftSide t={t}/>
-          <ContentSide t={t}/>
-          <RightSide t={t}/>
-        </div>
-        <Footer t={t}/>
+      <div className='w-8/12 mt-4 mb-4 flex flex-row mx-auto gap-4 items-start'>
+        <LeftSide t={t}/>
+        <ContentSide t={t}/>
+        <RightSide t={t}/>
       </div>
+        
     </>
   )
 }
