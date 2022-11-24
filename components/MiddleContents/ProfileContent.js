@@ -1,37 +1,82 @@
-import Image from "next/image"
-import Dmc from "../../public/dmc.jpg"
+import React from "react";
 import { NewQuestion } from "../newQuestion"
 
 export const ProfileContent = ({t}) => {
+    const [openTab, setOpenTab] = React.useState(1);
     return (
         <>
             <div className="w-3/4 rounded-md bg-white">
                 <NewQuestion />
                 <hr></hr>
-                <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
-                    <ul className="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" dataTabsToggle="#myTabContent" role="tablist">
-                        <li className="mr-2" role="presentation">
-                            <button className="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" dataTabsTarget="#articles" type="button" role="tab" ariaControls="articles" ariaSelected="false">Articles</button>
-                        </li>
-                        <li className="mr-2" role="presentation">
-                            <button className="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" dataTabsTarget="#questions" type="button" role="tab" ariaControls="questions" ariaSelected="false">Questions</button>
-                        </li>
-                        <li className="mr-2" role="presentation">
-                            <button className="inline-block p-4 rounded-t-lg border-b-2" id="profile-tab" dataTabsTarget="#answers" type="button" role="tab" ariaControls="answers" ariaSelected="false">Answers</button>
-                        </li>
-                    </ul>
+                <div className="flex flex-wrap">
+                    <div className="w-full">
+                        <ul className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row" role="tablist">
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                                <a className={"text-xs font-bold px-5 py-3 shadow-sm rounded block leading-normal " +(openTab === 1 ? "text-white bg-blue-900" : "text-blue-900 bg-white")} onClick={e => {
+                                                e.preventDefault();
+                                                setOpenTab(1);
+                                }}
+                                data-toggle="tab"
+                                href="#link1"
+                                role="tablist"
+                                >
+                                    Articles
+                                </a>
+                            </li>
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                                <a className={"text-xs font-bold px-5 py-3 shadow-sm rounded block leading-normal " +(openTab === 2 ? "text-white bg-blue-900" : "text-blue-900 bg-white")} onClick={e => {
+                                                e.preventDefault();
+                                                setOpenTab(2);
+                                }}
+                                data-toggle="tab"
+                                href="#link1"
+                                role="tablist"
+                                >
+                                    Questions
+                                </a>
+                            </li>
+                            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+                                <a className={"text-xs font-bold px-5 py-3 shadow-sm rounded block leading-normal " +(openTab === 3 ? "text-white bg-blue-900" : "text-blue-900 bg-white")} onClick={e => {
+                                                e.preventDefault();
+                                                setOpenTab(3);
+                                }}
+                                data-toggle="tab"
+                                href="#link1"
+                                role="tablist"
+                                >
+                                    Answers
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
+                            <div className="px-4 py-5 flex-auto">
+                                <div className="tab-content tab-space">
+                                    <div className={openTab === 1 ? "block" : "hidden"} id="link1">
+                                    <p>
+                                        Tab 1
+                                    </p>
+                                    </div>
+                                </div>
+                                <div className="tab-content tab-space">
+                                    <div className={openTab === 2 ? "block" : "hidden"} id="link1">
+                                    <p>
+                                        Tab 2
+                                    </p>
+                                    </div>
+                                </div>
+                                <div className="tab-content tab-space">
+                                    <div className={openTab === 3 ? "block" : "hidden"} id="link1">
+                                    <p>
+                                        Tab 3
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="myTabContent">
-                    <div className="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="articles" role="tabpanel" aria-labelledby="profile-tab">
-                        <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="questions" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="answers" role="tabpanel" aria-labelledby="settings-tab">
-                        <p className="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
-                    </div>
-                </div>
+                
             </div>
         </>
     )

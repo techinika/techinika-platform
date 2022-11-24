@@ -5,6 +5,7 @@ import Link from "next/link";
 import Head from 'next/head';
 import { LeftSide } from '../components/leftSide';
 import { ProfileContent } from '../components/MiddleContents/ProfileContent';
+import { ProfileLeft } from '../components/Left Components/ProfileLeft';
 
 export async function getStaticProps({ locale }) {
     return {
@@ -33,7 +34,8 @@ export default function Profile() {
             </div>
 
             <div className='w-8/12 mt-4 mb-4 flex flex-row mx-auto gap-4 items-start'>
-                <LeftSide t={t}/>
+                {/* <LeftSide t={t}/> */}
+                <ProfileLeft t={t}/>
                 <ProfileContent t={t}/>
             </div>
         

@@ -33,3 +33,11 @@
 .input {
   @apply px-4 py-2 border-gray-100 bg-gray-100 outline-none rounded-full text-sm focus:border-2 focus:border-blue-900 border-inherit border-2 w-full;
 }
+
+.badge {
+  @apply bg-blue-900 text-white text-xs px-4 py-1 rounded-full mt-2;
+} 
+
+.title {
+  @apply font-bold text-blue-900 p-3 text-center text-lg;
+}

@@ -3,7 +3,7 @@
 export const RecentArticles = ({t}) => {
     return (
         <div className="bg-white w-full rounded-md">
-            <h1 className="font-bold text-blue-900 p-3 text-center text-lg">{t('Recent Articles')}</h1>
+            <h1 className="title">{t('Recent Articles')}</h1>
             <hr></hr>
             <div>
                 <div>
