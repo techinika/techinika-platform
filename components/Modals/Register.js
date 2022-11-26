@@ -16,23 +16,23 @@ export const Register = ({setShowRegModal, t}) => {
                             
                             <form className="space-y-6 w-full" action="#">
                                 <div>
-                                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
+                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" required />
                                 </div>
                                 <div>
-                                    <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your Name')}</label>
+                                    <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your Name')}</label>
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" required />
                                 </div>
                                 <div>
-                                    <label for="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your Username')}</label>
+                                    <label htmlFor="text" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your Username')}</label>
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" required />
                                 </div>
                                 <div>
-                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
+                                    <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••" className="input" required/>
                                 </div>
                                 <div>
-                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
+                                    <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••" className="input" required/>
                                 </div>
                                 

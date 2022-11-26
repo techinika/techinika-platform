@@ -21,11 +21,11 @@ export const EditProfile = ({setShowEditProfile, t}) => {
                                     <input className="font-bold text-xl p-1 border-2 outline-none rounded-full px-3 py-1 text-center" value="Cishahayo Songa Achille" />
                                 </div>
                                 <div>
-                                    <label for="bio" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Small Bio')}</label>
+                                    <label htmlFor="bio" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Small Bio')}</label>
                                     <textarea className="input" id="bio">Building the future of technology.</textarea>
                                 </div>
                                 <div>
-                                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
+                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" value="email@yours.com" required />
                                 </div>
                                 

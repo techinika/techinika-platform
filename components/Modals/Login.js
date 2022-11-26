@@ -16,11 +16,11 @@ export const Login = ({setShowModal, t}) => {
                             
                             <form className="space-y-6 w-full" action="#">
                                 <div>
-                                    <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
+                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your email')}</label>
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" required />
                                 </div>
                                 <div>
-                                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
+                                    <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••" className="input" required/>
                                 </div>
                                 <div className="flex justify-between">
@@ -28,7 +28,7 @@ export const Login = ({setShowModal, t}) => {
                                         <div class="flex items-center h-5">
                                             <input id="remember" type="checkbox" value="" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800" required/>
                                         </div>
-                                        <label for="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{t('Remember me')}</label>
+                                        <label htmlFor="remember" className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{t('Remember me')}</label>
                                     </div>
                                     <a href="#" className="text-sm text-blue-700 hover:underline dark:text-blue-500">{t('Lost Password?')}</a>
                                 </div>

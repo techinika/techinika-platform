@@ -100,7 +100,7 @@ export const ProfileContent = ({t}) => {
                                     <div className={openTab === 3 ? "block" : "hidden"} id="link1">
                                     <div className="flex flex-col">
                                             <div>
-                                                <h1 className="content-title">Answered on "How to make money online?"</h1>
+                                                <h1 className="content-title">{`Answered on "How to make money online?"`}</h1>
                                                 <p className="text-xs mt-0 mb-2 text-blue-900">Posted on 20th November 2022</p>
                                                 <div className="flex flex-row justify-between items-center text-xs mb-1">
                                                     <p className="px-2 py-1 bg-gray-100 rounded-full border-2">12 Upvotes</p>

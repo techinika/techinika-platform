@@ -17,15 +17,15 @@ export const EditPasswordInside = ({t, setShowEditPasswordInside}) => {
                             
                             <form className="space-y-6 w-full" action="#">
                                 <div>
-                                    <label for="cpassword" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Current Password')}</label>
+                                    <label htmlFor="cpassword" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Current Password')}</label>
                                     <input type="password" name="cpassword" id="cpassword" className="input" placeholder="••••••••" required />
                                 </div>
                                 <div>
-                                    <label for="npassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('New password')}</label>
+                                    <label htmlFor="npassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('New password')}</label>
                                     <input type="password" name="npassword" id="npassword" placeholder="••••••••" className="input" required/>
                                 </div>
                                 <div>
-                                    <label for="conpassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
+                                    <label htmlFor="conpassword" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
                                     <input type="password" name="conpassword" id="conpassword" placeholder="••••••••" className="input" required/>
                                 </div>
                                 
