@@ -16,7 +16,7 @@ export const ContentSide = ({t}) => {
                             <p>This is what can be done on international level of things and we can be able to use it for a lot more we want to use it for.</p>
                         </div>
                         <div className="w-12/12 rounded-lg">
-                            <Image src={Dmc} layout="responsive" className="object"/>
+                            <Image src={Dmc} layout="responsive" className="object" alt="content"/>
                         </div>
                         <hr></hr>
                     </div>
@@ -27,7 +27,7 @@ export const ContentSide = ({t}) => {
                             <p>This is what can be done on international level of things and we can be able to use it for a lot more we want to use it for.</p>
                         </div>
                         <div className="w-12/12 rounded-lg">
-                            <Image src={Dmc} layout="responsive" className="object"/>
+                            <Image src={Dmc} layout="responsive" className="object" alt="content"/>
                         </div>
                         <hr></hr>
                     </div>
@@ -38,7 +38,7 @@ export const ContentSide = ({t}) => {
                             <p>This is what can be done on international level of things and we can be able to use it for a lot more we want to use it for.</p>
                         </div>
                         <div className="w-12/12 rounded-lg">
-                            <Image src={Dmc} layout="responsive" className="object"/>
+                            <Image src={Dmc} layout="responsive" className="object" alt="content"/>
                         </div>
                         <hr></hr>
                     </div>
@@ -49,7 +49,7 @@ export const ContentSide = ({t}) => {
                             <p>This is what can be done on international level of things and we can be able to use it for a lot more we want to use it for.</p>
                         </div>
                         <div className="w-12/12 rounded-lg">
-                            <Image src={Dmc} layout="responsive" className="object"/>
+                            <Image src={Dmc} layout="responsive" className="object" alt="content"/>
                         </div>
                         <hr></hr>
                     </div>

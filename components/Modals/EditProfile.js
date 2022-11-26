@@ -17,7 +17,7 @@ export const EditProfile = ({setShowEditProfile, t}) => {
                             
                             <form className="space-y-6 w-full" action="#">
                                 <div className="flex flex-col items-center py-5 px-2">
-                                    <Image className="rounded-full object-cover" src={Vector} width="100" height={100}/>
+                                    <Image className="rounded-full object-cover" src={Vector} width="100" height={100} alt="content"/>
                                     <input className="font-bold text-xl p-1 border-2 outline-none rounded-full px-3 py-1 text-center" value="Cishahayo Songa Achille" />
                                 </div>
                                 <div>

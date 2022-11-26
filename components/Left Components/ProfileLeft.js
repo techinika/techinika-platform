@@ -32,7 +32,7 @@ export const ProfileLeft = ({t}) => {
             <div className="bg-white w-full rounded-md text-center relative">
                 <p className="text-xs text-blue-900 absolute top-3 right-3 cursor-pointer"  onClick={e=> setShowEditProfile(true)}>Edit</p>
                 <div className="flex flex-col items-center py-5 px-2">
-                    <Image className="rounded-full" src={Vector} width="100" height={100}/>
+                    <Image className="rounded-full" src={Vector} width="100" height={100} alt="Badge"/>
                     <h1 className="font-bold text-xl p-1">Cishahayo Songa Achille</h1>
                     <p className="mt-0 mb-2 text-xs text-blue-900">@achillesonga</p>
                     <p>Building the future of technology.</p>
@@ -59,7 +59,7 @@ export const ProfileLeft = ({t}) => {
                     {badges.length !== 0 ?<div className="flex flex-wrap flex-row items-center justify-center">
                         {badges.map(b => (
                             <div key={b.id}>
-                                <Image src={b.image} width="50" height="60" title={b.title}/>
+                                <Image src={b.image} width="50" height="60" title={b.title} alt="Badge"/>
                             </div>
                         ))}
                     </div> : <p>{t('No badges yet, ask questions and answer questions to earn some badges.')}</p>}

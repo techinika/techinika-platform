@@ -6,7 +6,7 @@ export const ShortProfile = ({t}) => {
     return (
         <div className="bg-white w-full rounded-md text-center">
             <div className="flex flex-col items-center py-5 px-2">
-                <Image className="rounded-full" src={Vector} width="100" height={100}/>
+                <Image className="rounded-full" src={Vector} width="100" height={100} alt="Profile Picture"/>
                 <h1 className="font-bold text-xl p-1">Cishahayo Songa Achille</h1>
                 <p>Building the future of technology.</p>
             </div>
