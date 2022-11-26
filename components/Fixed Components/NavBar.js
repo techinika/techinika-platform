@@ -1,39 +1,32 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import React from 'react';
+import { Login } from '../Modals/Login';
+import { Register } from '../Modals/Register';
 
-export const NavBar = () => {
-    const { locale, locales, push } = useRouter();
-    const [loc, setLoc] = React.useState()
-
-    // const handleLocale = (l) => {
-    //     push('/', undefined, {locale: l});
-    // }
-    React.useEffect(()=> {
-        push('/', undefined, {locale: loc});
-    }, [loc])
+export const NavBar = ({t}) => {
+    const [showModal, setShowModal] = React.useState(false);
+    const [showRegModal, setShowRegModal] = React.useState(false);
 
     return (
         <>
-            <div className='flex justify-between items-center bg-white py-2 px-10'>
-                <div>
-                    <h1 className='logo'>Techinika</h1>
-                </div>
-                <div>
-                    <input placeholder='Search ...' className='input'/>
-                </div>
-                <div className='flex gap-3'>
-                    {/* {locales.map(l => (
-                        <button key={l} onClick={handleLocale(l)}>
-                            {l}
-                        </button>
-                    ))} */}
-                    <select value={loc} onChange={e => setLoc(e.target.value)} className="select">
-                        <option value="kin">Kin</option>
-                        <option value="en">En</option>
-                        <option value="fr">Fr</option>
-                    </select>
-                    <button className='btn-blue'>Log In</button>
-                    <button className='btn-normal'>Sign Up</button>
+           {showModal ? <Login setShowModal={setShowModal} t={t}/> : null}
+           {showRegModal ? <Register setShowRegModal={setShowRegModal} t={t}/> : null}
+
+
+            <div className='bg-white'>
+                <div className='flex justify-between items-center py-2 w-8/12 mx-auto'>
+                    <div>
+                        <Link href="/">
+                            <h1 className='logo'>{t('Techinika')}</h1>
+                        </Link>
+                    </div>
+                    <div>
+                        <input placeholder={t('Search ...')} className='input'/>
+                    </div>
+                    <div className='flex gap-3'>
+                        <button className='btn-blue transition-all duration-150' type="button" onClick={() => setShowModal(true)}>{t('Log In')}</button>
+                        <button className='btn-normal transition-all duration-150' type="button" onClick={() => setShowRegModal(true)}>{t('Sign Up')}</button>
+                    </div>
                 </div>
             </div>
         </>
