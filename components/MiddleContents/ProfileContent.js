@@ -1,13 +1,13 @@
 import React from "react";
 import { Offer } from "../Left Components/Offer";
-import { NewQuestion } from "../newQuestion"
+import { NewQuestion } from "../Fixed Components/newQuestion"
 
 export const ProfileContent = ({t}) => {
     const [openTab, setOpenTab] = React.useState(1);
     return (
         <>
             <div className="w-3/4 rounded-md bg-white">
-                <NewQuestion />
+                <NewQuestion t={t}/>
                 <hr></hr>
                 <div className="flex flex-wrap">
                     <div className="w-full">
