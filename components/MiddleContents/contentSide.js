@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Dmc from "../../public/dmc.jpg"
-import { NewQuestion } from "../newQuestion"
+import { NewQuestion } from "../Fixed Components/newQuestion"
 
 export const ContentSide = ({t}) => {
     return (
         <>
             <div className="w-2/4 rounded-md bg-white">
-                <NewQuestion />
+                <NewQuestion t={t}/>
                 <hr></hr>
                 <div className="flex flex-col">
                     <div className="mt-2">

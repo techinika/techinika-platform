@@ -28,16 +28,16 @@ export const Register = ({setShowRegModal, t}) => {
                                     <input type="email" name="email" id="email" className="input" placeholder="name@company.com" required />
                                 </div>
                                 <div>
-                                    <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
+                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Your password')}</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••" className="input" required/>
                                 </div>
                                 <div>
-                                    <label htmlFor="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
+                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{t('Confirm password')}</label>
                                     <input type="password" name="password" id="password" placeholder="••••••••" className="input" required/>
                                 </div>
                                 
                                 <button type="submit" className="btn-long">{t('Register a new account')}</button>
-                                <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+                                <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
                                     {t('Already registered?')} <a href="#" className="text-blue-700 hover:underline dark:text-blue-500">{t('Login here')}</a>
                                 </div>
                             </form>
